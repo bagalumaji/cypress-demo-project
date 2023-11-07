@@ -47,8 +47,8 @@ List any prerequisites that are necessary to set up and run the project. For exa
 
 - Node.js
 - Cypress 13.x
-- [Mock Framework Name]
-- [Any other dependencies]
+- Mock Framework
+- Chai Assertions
 
 ## Installation
 
