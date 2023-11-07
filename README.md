@@ -17,9 +17,29 @@ This project is a Cypress automation project using Cypress version 13, a mock fr
 - [Contributing](#contributing)
 - [License](#license)
 
+# Project Structure
+
+project-root/
+├── cypress/
+| ├── fixtures/ # Test data fixtures
+| ├── integration/ # Test scripts
+| ├── plugins/ # Cypress plugins
+| ├── support/ # Custom commands and utilities
+| ├── ...
+├── page-objects/ # Page Object Model classes
+├── ...
+
 ## Getting Started
 
-This section should provide an overview of the project and what it does.
+# Running Tests
+
+# Run tests locally
+
+npm run cypress:open
+
+# Run tests headlessly
+
+npm run cypress:run
 
 ## Prerequisites
 
