@@ -5,6 +5,7 @@ describe("wait and pause demo", () => {
     //cy.wait(() => cy.get("h4").contains("Horizontal Slider"));
     cy.wait(3000);
     cy.get("h3").contains("Horizontal Slider");
-    //cy.pause(1);
+    cy.pause(1);
+    cy.get("a").contains("Elemental Selenium");
   });
 });
