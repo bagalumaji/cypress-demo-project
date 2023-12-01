@@ -1,7 +1,7 @@
 
 describe('suite-1',function(){
-    beforeEach(function(){
-        cy.log("before-each-inside-describe-")
+    before(function(){
+        cy.log("before-inside-describe-")
     })
     it("test-1",function(){
         cy.log("suite-1 test-1");
@@ -9,8 +9,8 @@ describe('suite-1',function(){
     it("test-2",function(){
         cy.log("suite-1 test-2");
     })
-    this.afterEach(function(){
-        cy.log("after-each-inside-describe-")
+    after(function(){
+        cy.log("after-inside-describe-")
     })
 })
 
