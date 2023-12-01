@@ -1,6 +1,6 @@
 
 
-describe.only('suite-1',function(){
+describe.skip('suite-1',function(){
     it("test-1",function(){
         cy.log("suite-1 test-1");
     })
