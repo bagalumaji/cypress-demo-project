@@ -9,6 +9,9 @@ describe('suite-1',function(){
     it("test-2",function(){
         cy.log("suite-1 test-2");
     })
+    this.afterEach(function(){
+        cy.log("after-each-inside-describe-")
+    })
 })
 
 describe('suite-2',function(){
