@@ -12,6 +12,19 @@ describe('element test', () => {
         cy.visit("https://naveenautomationlabs.com/opencart/");
         cy.get('.image').eq(2).click();
     })
-    
+    it("contains command test", () => {
+        cy.visit("https://naveenautomationlabs.com/opencart/");
+        cy.contains('MacBook').click();
+    })
+    it("find command test", () => {
+        cy.visit("https://naveenautomationlabs.com/opencart/");
+        //cy.get('div').find(">a>img[alt='MacBook']").click();
+        cy.get('div').find('>h4>a').contains('MacBook').click();
+    })
+    it("filter command test", () => {
+        cy.visit("https://naveenautomationlabs.com/opencart/");
+        //cy.get('div').find(">a>img[alt='MacBook']").click();
+        cy.get('div').find('>h4>').filter('a').contains('MacBook').click();
+    })
     
 })
