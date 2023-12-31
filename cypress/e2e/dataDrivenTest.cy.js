@@ -1,24 +1,18 @@
-const data = [
-    {
-        "context": "1",
-        "name": "test1.json"
-    },
-    {
-        "context": "2",
-        "name": "test2.json"
-    }
-]
+const testData = [{"name": "test1", "context": "1"}, {"name": "test1", "context": "1"}];
+
 describe("data driven test demo",function (){
-    data.forEach(function (testDataFixture){
-        describe(testDataFixture.context,function (){
-            before(function (){
-                cy.fixture(testDataFixture.name).then((data)=>{this.data =data;});
-            })
-            it('data driven test ', function ()  {
-                cy.log(this.data.firstname);
-                cy.log(this.data.lastname);
-                cy.log(this.data.age);
-            });
-        })
+    testData.forEach(function(testDataFixture){
+       describe(testDataFixture.context,function (){
+           before(function (){
+               cy.fixture(testDataFixture.name).then(function (data){
+                   this.data = data;
+               })
+           })
+           it('data driven test : '+testDataFixture.context, function ()  {
+               cy.log(this.data.firstname);
+               cy.log(this.data.lastname);
+               cy.log(this.data.age);
+           })
+       })
     })
 })
